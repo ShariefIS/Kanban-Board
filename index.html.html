@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<html lang="en">
+
+<!-- begin::Head -->
+
+<head>
+	<base href="../../">
+	<meta charset="utf-8" />
+	<title>Metronic | Kanban Board</title>
+	<meta name="description" content="Pure agnostic Javascript plugin for Kanban boards">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!--begin::Fonts -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
+
+	<!--end::Fonts -->
+
+	<!--begin::Page Custom Styles(used by this page) -->
+	<link href="assets/kanban.bundle.css" rel="stylesheet" type="text/css" />
+
+	<!--end::Page Custom Styles -->
+
+	<!--begin::Global Theme Styles(used by all pages) -->
+	<link href="assets/style.bundle.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<!-- end::Head -->
+
+<!-- begin::Body -->
+
+<body
+	class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+
+	<!-- begin:: Page -->
+
+	<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+
+
+		<!-- begin:: Content -->
+		<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="kt-portlet">
+						<div class="kt-portlet__head">
+							<div class="kt-portlet__head-label">
+								<h3 class="kt-portlet__head-title">
+									Default Kanban Demo
+								</h3>
+							</div>
+						</div>
+						<div class="kt-portlet__body">
+							<div id="kanban1"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="kt-portlet">
+						<div class="kt-portlet__head">
+							<div class="kt-portlet__head-label">
+								<h3 class="kt-portlet__head-title">
+									Custom Colors Demo
+								</h3>
+							</div>
+						</div>
+						<div class="kt-portlet__body">
+							<div id="kanban2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="kt-portlet">
+						<div class="kt-portlet__head">
+							<div class="kt-portlet__head-label">
+								<h3 class="kt-portlet__head-title">
+									Kanban Interactivity Demo
+								</h3>
+							</div>
+						</div>
+						<div class="kt-portlet__body">
+							<div id="kanban3"></div>
+							<div class="kanban-toolbar">
+								<button class="btn btn-brand" id="addDefault">Add "Default" board</button>
+								<button class="btn btn-danger" id="addToDo">Add element in "To Do" Board</button>
+								<button class="btn btn-success" id="removeBoard">Remove "Done" Board</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="kt-portlet">
+						<div class="kt-portlet__head">
+							<div class="kt-portlet__head-label">
+								<h3 class="kt-portlet__head-title">
+									Dynamic Board & Task Demo
+								</h3>
+							</div>
+						</div>
+						<div class="kt-portlet__body">
+							<div id="kanban4"></div>
+							<div class="kanban-toolbar">
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="kanban-toolbar__title">
+											Add New Board
+										</div>
+										<div class="form-group row">
+											<div class="col-12">
+												<input id="kanban-add-board" class="form-control" type="text"
+													placeholder="Board Name" /><br />
+												<select id="kanban-add-board-color" class="form-control">
+													<option value="">Select a Board Color</option>
+													<option value="brand">Brand</option>
+													<option value="brand-light">Brand Light</option>
+													<option value="primary">Primary</option>
+													<option value="primary-light">Primary Light</option>
+													<option value="success">Success</option>
+													<option value="success-light">Success Light</option>
+													<option value="info">Info</option>
+													<option value="info-light">Info Light</option>
+													<option value="warning">Warning</option>
+													<option value="warning-light">Warning Light</option>
+													<option value="danger">Danger</option>
+													<option value="danger-light">Danger Light</option>
+												</select>
+												<br />
+												<button class="btn btn-success" id="addBoard">Add board</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="kanban-toolbar__title">
+											Add New Task
+										</div>
+										<div class="form-group">
+											<input id="kanban-add-task" class="form-control" type="text"
+												placeholder="Task Name" /><br />
+											<select id="kanban-select-task" class="form-control">
+												<option value="">Select a Board</option>
+												<option value="_board1">Board 1</option>
+												<option value="_board2">Board 2</option>
+												<option value="_board3">Board 3</option>
+											</select>
+											<br />
+											<select id="kanban-add-task-color" class="form-control">
+												<option value="">Select a Task Color</option>
+												<option value="brand">Brand</option>
+												<option value="primary">Primary</option>
+												<option value="success">Success</option>
+												<option value="info">Info</option>
+												<option value="warning">Warning</option>
+												<option value="danger">Danger</option>
+											</select>
+											<br />
+											<button class="btn btn-primary" id="addTask">Add Task</button>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="kanban-toolbar__title">
+											Remove Board
+										</div>
+										<div class="form-group row">
+											<div class="col-12">
+												<select id="kanban-select-board" class="form-control">
+													<option value="">Select a Board</option>
+													<option value="_board1">Board 1</option>
+													<option value="_board2">Board 2</option>
+													<option value="_board3">Board 3</option>
+												</select>
+												<br />
+												<button class="btn btn-danger" id="removeBoard2">Remove Board</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- end:: Content -->
+	</div>
+
+	<!-- end:: Page -->
+
+
+
+	<!-- begin::Global Config(global config for global JS sciprts) -->
+	<script>
+		var KTAppOptions = {
+			"colors": {
+				"state": {
+					"brand": "#5d78ff",
+					"dark": "#282a3c",
+					"light": "#ffffff",
+					"primary": "#5867dd",
+					"success": "#34bfa3",
+					"info": "#36a3f7",
+					"warning": "#ffb822",
+					"danger": "#fd3995"
+				},
+				"base": {
+					"label": [
+						"#c5cbe3",
+						"#a1a8c3",
+						"#3d4465",
+						"#3e4466"
+					],
+					"shape": [
+						"#f0f3ff",
+						"#d9dffa",
+						"#afb4d4",
+						"#646c9a"
+					]
+				}
+			}
+		};
+	</script>
+
+	<!-- end::Global Config -->
+
+	<!--begin::Global Theme Bundle(used by all pages) -->
+	<script src="assets/plugins.bundle.js" type="text/javascript"></script>
+
+	<!--end::Global Theme Bundle -->
+
+	<!--begin::Page Scripts(used by this page) -->
+	<script src="assets/kanban.bundle.js" type="text/javascript"></script>
+	<script src="assets/kanban-board.js" type="text/javascript"></script>
+
+	<!--end::Page Scripts -->
+</body>
+
+<!-- end::Body -->
+
+</html>
