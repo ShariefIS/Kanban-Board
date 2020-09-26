@@ -37919,3 +37919,27 @@ body {
         .kt-footer .kt-footer__bottom .kt-footer__wrapper .kt-footer__menu a:first-child {
           padding-left: 0;
           margin-left: 0; } }
+          // CUSTOM SCROLLBAR
+
+          /* width */
+          ::-webkit-scrollbar {
+            width: 5px;
+            height: 6px;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 50px;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #777;
+          }
+          
