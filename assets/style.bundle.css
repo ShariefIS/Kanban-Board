@@ -15317,9 +15317,10 @@ body.swal2-height-auto {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap; 
+  justify-content: center;}
   .kanban-container .kanban-board {
-    width: calc(20% - 1.25rem) !important;
+    width: 30% !important;
     border-radius: 4px;
     margin-bottom: 1.25rem;
     margin-right: 1.25rem !important;
