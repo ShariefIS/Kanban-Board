@@ -37919,27 +37919,29 @@ body {
         .kt-footer .kt-footer__bottom .kt-footer__wrapper .kt-footer__menu a:first-child {
           padding-left: 0;
           margin-left: 0; } }
-          // CUSTOM SCROLLBAR
+         /* CUSTOM SCROLLBAR */
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
 
-          /* width */
-          ::-webkit-scrollbar {
-            width: 5px;
-            height: 6px;
-          }
-          
-          /* Track */
-          ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-          }
-          
-          /* Handle */
-          ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 50px;
-          }
-          
-          /* Handle on hover */
-          ::-webkit-scrollbar-thumb:hover {
-            background: #777;
-          }
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
           
